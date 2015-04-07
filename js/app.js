@@ -54,5 +54,20 @@ var taskIncomplete = function() {
 	// append the task li to the #incomplete-tasks
 }
 
+
 // Set the click handler to the addTask function
 addButton.onclick = addTask;
+
+// cylcle over incompleteTaskHolder ul li's
+	// for each li
+		// select its children
+		// bind editTask to edit button
+		// bind deleteTask to delete button
+		// bind taskCompleted to the checkbox
+
+// cylcle over completedTaskHolder ul li's
+	// for each li
+		// select its children
+		// bind editTask to edit button
+		// bind deleteTask to delete button
+		// bind taskIncomplete to the checkbox
