@@ -56,10 +56,19 @@ var taskIncomplete = function() {
 
 var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
 	console.log('bind list item events');
-		// select its children
-			// bind editTask to edit button
-			// bind deleteTask to delete button
-			// bind checkBoxEventHandler to the checkbox
+		// select li's children
+		var checkBox = taskListItem.querySelector('input[type=checkbox]');
+		var editButton = taskListItem.querySelector('button.edit');
+		var deleteButton = taskListItem.querySelector('button.delete');
+
+		// bind editTask to edit button
+		editButton.onclick = editTask;
+
+		// bind deleteTask to delete button
+		deleteButton.onclick = deleteTask;
+
+		// bind checkBoxEventHandler to the checkbox
+		checkBox.onchange = checkBoxEventHandler;
 }
 
 // Set the click handler to the addTask function
